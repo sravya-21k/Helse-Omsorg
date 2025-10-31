@@ -1,0 +1,215 @@
+:root {
+    --primary: #006699;          /* kommune blue */
+    --accent: #0a8dc4;
+    --bg: #f9fbfc;
+    --text: #222;
+    --muted: #666;
+    --border: #d0d7de;
+    --radius: 12px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+.service-detail{
+    background: #fff;
+    padding: 2rem;
+    border-radius: var(--radius);
+    border:1px solid var(--border);
+    box-shadow:var(--shadow)
+
+}
+.service-header{
+    border-bottom:2px solid var(--border);
+    padding-bottom: 0.75rem;
+    margin-bottom:1.25rem;
+}
+.service-title{
+    margin:0 0 0.25rem 0;
+    color: var(--primary);
+}
+
+/*toolbar*/
+.toolbar{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top: 0.75rem;
+}
+.btn-light{
+    background: #eef6ff;
+    color: #064d71;
+    padding: 0.45rem 0.9rem;
+    border:1px solid #d7e5f1;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+.btn-light:hover{
+  background: #e3e3e3;
+}
+
+/*contact/info box*/
+
+.info-box{
+    background: #f4f9ff;
+    border:1px solid #d7e5f1;
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+}
+.kv-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.kv-list li{
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap:12px;
+    padding: 6px 0;
+    border-bottom: 1px dashed #e6eef6;
+}
+.kv-list li:last-child{ border-bottom: 0;}
+.kv-key{ color :var(--muted)}
+.kv-val a { color : var(--accent);
+text-decoration: none;}
+.kv-val a:hover{text-decoration: underline;
+color:green;}
+
+/*relations list*/
+/* === RELATIONS SECTION === */
+.relations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .relation-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .relation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .relation-card h4 {
+    color: #005b89;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+  
+  /* Metadata section inside card */
+  .relation-meta {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+  }
+  
+  .relation-meta p {
+    margin: 0.3rem 0;
+  }
+  
+  .relation-meta strong {
+    color: #005b89;
+  }
+  
+  /* Button link at bottom */
+  .relation-link {
+    display: inline-block;
+    background-color: #005b89;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .relation-link:hover {
+    background-color: #0072b1;
+  }
+  
+  /* Group headings (Parent / Child / Related) */
+  .relation-group {
+    margin-bottom: 2rem;
+  }
+  
+  .relation-group h5 {
+    color: #003e5c;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    border-left: 4px solid #005b89;
+    padding-left: 0.6rem;
+  }
+  
+  /* === Direction badges === */
+  .dir-badge {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-right: 0.2rem;
+    color: white;
+  }
+  
+  .dir-badge.in {
+    background-color: #c8f7c5; /* light green */
+    color: #14532d; /* deep green text */
+    border: 1px solid #86efac;
+  }
+  
+  .dir-badge.out {
+    background-color: #fecaca; /* light red */
+  color: #7f1d1d; /* dark red text */
+  border: 1px solid #fca5a5;
+  }
+  
+  .dir-badge.neutral {
+    background-color: #e2e8f0; /* light grey */
+    color: #334155;
+    border: 1px solid #cbd5e1;
+  }
+  
+.labels{
+    margin-left: 4px;
+}
+/*skeleton(loading)*/
+.skeleton{
+    background: linear-gradient(90deg,#eef2f6 25%,#f6f9fc 37%,#eef2f6 63%);
+    border-radius: 80px;
+    background-size: 400% 100%;
+    animation:shimmer 1.2s ease-in-out infinite;
+    margin: 8px 0;
+    background-color: red;
+}
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .back-btn {
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #cbdbe9;
+    background: #eef6ff;
+    color: #064d71;
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+  .back-btn:hover {
+    background: #e3f0fb;
+  }
+  

@@ -1,0 +1,25 @@
+.footer {
+    background-color: #005b89;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    margin-top: auto;
+  }
+  
+  .footer a {
+    color: #bde0fe;
+    text-decoration: underline;
+  }
+  
+  .footer a:hover {
+    color: #ffffff;
+  }
+  
+  .footer .emergency {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #ffdddd;
+  }
+  

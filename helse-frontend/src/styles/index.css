@@ -1,0 +1,193 @@
+/* ======== Base styles ======== */
+:root {
+  --primary: #006699;          /* kommune blue */
+  --accent: #0a8dc4;
+  --bg: #f9fbfc;
+  --text: #222;
+  --muted: #666;
+  --border: #d0d7de;
+  --radius: 12px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  color: var(--primary);
+  margin-top: 0.5rem;
+}
+
+/* ======== Header ======== */
+.site-header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+.site-header nav a.active {
+  text-decoration: underline;
+}
+
+/* ======== Layout ======== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ======== Cards ======== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--accent);
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+
+
+/* ======== Buttons ======== */
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #0890d4;
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef6ff;
+  border: 1px solid #d7e5f1;
+  font-size: 12px;
+}
+/* --- Breadcrumb / Navigation --- */
+.navigation {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+  color: var(--muted, #5b6b7a);
+}
+
+.navigation .nav-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation .nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0; /* allow text truncation */
+}
+
+.navigation .sep {
+  opacity: 0.5;
+  user-select: none;
+}
+
+/* Links */
+.navigation .nav-link {
+  color: var(--accent, #0b6fb3);
+  text-decoration: none;
+  padding: 3px 6px;
+  border-radius: 8px;
+  transition: background 120ms ease, color 120ms ease;
+  max-width: 24ch;           /* prevent super long names from breaking layout */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navigation .nav-link:hover,
+.navigation .nav-link:focus-visible {
+  background: #eef6ff;
+  outline: none;
+}
+
+/* Current breadcrumb (no link) */
+.navigation .nav-current {
+  color: var(--text, #0b1220);
+  font-weight: 600;
+  max-width: 28ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Home */
+.navigation .home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navigation .home-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* Small screens: make the whole trail scrollable horizontally if needed */
+@media (max-width: 520px) {
+  .navigation .nav-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+  .navigation .nav-item {
+    flex: 0 0 auto;
+  }
+}
+
+mark {
+  background: #ffe599;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+

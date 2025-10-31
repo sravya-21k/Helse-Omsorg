@@ -1,0 +1,33 @@
+.service-info {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .service-info p {
+    font-size: 1rem;
+    color: #334155;
+    margin: 0.4rem 0;
+  }
+  
+  .service-info a {
+    color: #004e77;
+    text-decoration: none;
+  }
+  
+  .service-info a:hover {
+    text-decoration: underline;
+  }
+  
+  .service-desc {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .service-attributes strong {
+    color: #005b89;
+  }
+  
